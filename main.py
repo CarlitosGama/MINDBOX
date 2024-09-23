@@ -53,7 +53,16 @@ while True:
       print("\nNumero de control: ", numero_control_M) 
 
     if opcion == "3":
-     pass
+     print("\n Seleccionaste la opcion para registrar una materia")
+
+     nombre = input("Ingrese el nombre de la materia: ")
+     descripcion = input("Ingrese la drescripcion de la materia: ")
+     semestre = input("Ingrese el semestre en el que se cursa la materia: ")
+     creditos = input("Ingrese los creditos de la materia: ")
+
+     numero_control_MT = escuela.generar_num_control_MT(nombre=nombre, semestre=semestre, creditos=creditos)
+
+     print("\nNumero de control: ", numero_control_MT) 
 
     if opcion == "4":
      pass
