@@ -60,5 +60,33 @@ class Escuela:
        print(f"No se encontró el estudiante con numero de control: {numero_control}") 
 
 
-   
+    def  listar_Maestros(self):
+       print("****Maestros****")
+
+       for maestro in self.lista_maestros:
+          print(maestro.mostrar_info_M())
+
+    def eliminar_maestro(self, numero_control: str):
+       for maestro in self.lista_maestros:
+          if maestro.numero_control ==  numero_control:
+             self.lista_estudiantes.remove(maestro)
+             print("Maestro eliminado")
+             return
+        
+       print(f"No se encontró el maestro con numero de control: {numero_control}") 
+
+    def  listar_materias(self):
+       print("****Materias****")
+
+       for materia in self.lista_materias:
+          print(materia.mostrar_info_MT())
+
+    def eliminar_materia(self, numero_control: str):
+       for materia in self.lista_materias:
+          if materia.numero_control ==  numero_control:
+             self.lista_estudiantes.remove(materia)
+             print("Materia eliminada")
+             return
+        
+       print(f"No se encontró la materia con numero de control: {numero_control}") 
         

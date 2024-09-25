@@ -78,29 +78,33 @@ while True:
      pass
 
     if opcion == "6":
-     pass
+     escuela.listar_Maestros()
 
     if opcion == "7":
      
      escuela.listar_estudiantes()
 
     if opcion == "8":
-     pass
+     escuela.listar_materias()
 
     if opcion == "9":
      pass
 
     if opcion == "10":
-     pass
+     print("\nSeleccionaste la opcion para eliminar un maestro")
+     numero_control_F = input("Ingrese el numero de control del  maestro que desea eliminar: ")
+     escuela.eliminar_maestro(numero_control=numero_control_F)
 
     if opcion == "11":
      print("\nSeleccionaste la opcion para eliminar un estudiante")
-     numero_control_F = input("Ingrese el ID del  estudiante que desea eliminar: ")
+     numero_control_F = input("Ingrese el numero de control del  estudiante que desea eliminar: ")
      escuela.eliminar_estudiante(numero_control=numero_control_F)
 
 
     if opcion == "12":
-     pass
+     print("\nSeleccionaste la opcion para eliminar una materia")
+     numero_control_F = input("Ingrese el numero de control de la  materia que desea eliminar: ")
+     escuela.eliminar_materia(numero_control=numero_control_F)
 
     if opcion == "13":
      print("Hasta luego")
