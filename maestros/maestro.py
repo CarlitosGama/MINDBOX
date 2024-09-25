@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Maestro:
     numero_control: str
     nombre: str
@@ -11,3 +13,5 @@ class Maestro:
         self.apellido = apellido
         self.rfc = rfc
         self.sueldo = sueldo
+
+      

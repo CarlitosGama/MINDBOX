@@ -44,3 +44,21 @@ class Escuela:
       numero_control_M = f"M{self.fecha_nacimiento}{datetime.now().day}{randint(500,  5000)}{primeros_dos}{ultimos_dos}{len(self.lista_estudiantes) + 1}"
       return numero_control_M
     
+    def  listar_estudiantes(self):
+       print("****Estudiantes****")
+
+       for estudiante in self.lista_estudiantes:
+          print(estudiante.mostrar_info_E())
+
+    def eliminar_estudiante(self, numero_control: str):
+       for estudiante in self.lista_estudiantes:
+          if estudiante.numero_control ==  numero_control:
+             self.lista_estudiantes.remove(estudiante)
+             print("Estudiante eliminado")
+             return
+        
+       print(f"No se encontró el estudiante con numero de control: {numero_control}") 
+
+
+   
+        

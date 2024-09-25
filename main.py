@@ -13,7 +13,14 @@ while True:
     print("3.- Registra Materia")
     print("4.- Registra Grupo")
     print("5.- Registra Horario")
-    print("6.- Salir")
+    print("6.- Mostrar Maestros")
+    print("7.- Mostrar Estudiantes")
+    print("8.- Mostrar Materias")
+    print("9.- Mostrar Grupos")
+    print("10.- Eliminar Maestros")
+    print("11.- Eliminar Estudiantes")
+    print("12.- Eliminar Materias")
+    print("13.- Salir")
 
     opcion = input("Ingresa una opcion para continuar: ")
 
@@ -71,6 +78,31 @@ while True:
      pass
 
     if opcion == "6":
+     pass
+
+    if opcion == "7":
+     
+     escuela.listar_estudiantes()
+
+    if opcion == "8":
+     pass
+
+    if opcion == "9":
+     pass
+
+    if opcion == "10":
+     pass
+
+    if opcion == "11":
+     print("\nSeleccionaste la opcion para eliminar un estudiante")
+     numero_control_F = input("Ingrese el ID del  estudiante que desea eliminar: ")
+     escuela.eliminar_estudiante(numero_control=numero_control_F)
+
+
+    if opcion == "12":
+     pass
+
+    if opcion == "13":
      print("Hasta luego")
      break
     

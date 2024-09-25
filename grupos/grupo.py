@@ -9,3 +9,5 @@ class Grupo:
     maestros: list[Maestro] = []
     materias: list[Materia] = []
     tipo: chr
+
+    
