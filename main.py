@@ -16,11 +16,13 @@ while True:
     print("6.- Mostrar Maestros")
     print("7.- Mostrar Estudiantes")
     print("8.- Mostrar Materias")
-    print("9.- Mostrar Grupos")
-    print("10.- Eliminar Maestros")
-    print("11.- Eliminar Estudiantes")
-    print("12.- Eliminar Materias")
-    print("13.- Salir")
+    print("9.- Mostrar Carreras")
+    print("10.- Mostrar Grupos")
+    print("11.- Mostrar Semestres")
+    print("12.- Eliminar Maestros")
+    print("13.- Eliminar Estudiantes")
+    print("14.- Eliminar Materias")
+    print("15.- Salir")
 
     opcion = input("Ingresa una opcion para continuar: ")
 
@@ -87,26 +89,32 @@ while True:
     if opcion == "8":
      escuela.listar_materias()
 
-    if opcion == "9":
+    if opcion == "9": #carrera
+     print("\nSeleccionaste la opcion para mostrar  ")
+
+    if opcion == "10": #grupos
      pass
 
-    if opcion == "10":
+    if opcion == "11": #semestres
+     pass
+
+    if opcion == "12":
      print("\nSeleccionaste la opcion para eliminar un maestro")
      numero_control_F = input("Ingrese el numero de control del  maestro que desea eliminar: ")
      escuela.eliminar_maestro(numero_control=numero_control_F)
 
-    if opcion == "11":
+    if opcion == "13":
      print("\nSeleccionaste la opcion para eliminar un estudiante")
      numero_control_F = input("Ingrese el numero de control del  estudiante que desea eliminar: ")
      escuela.eliminar_estudiante(numero_control=numero_control_F)
 
 
-    if opcion == "12":
+    if opcion == "14":
      print("\nSeleccionaste la opcion para eliminar una materia")
      numero_control_F = input("Ingrese el numero de control de la  materia que desea eliminar: ")
      escuela.eliminar_materia(numero_control=numero_control_F)
 
-    if opcion == "13":
+    if opcion == "15":
      print("Hasta luego")
      break
     

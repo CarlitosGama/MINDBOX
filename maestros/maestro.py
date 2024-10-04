@@ -1,16 +1,14 @@
 from datetime import datetime
+from ususario.usuario import Usuario
 
-class Maestro:
-    numero_control: str
-    nombre: str
-    apellido: str
+class Maestro(Usuario):
+
     rfc: str
     sueldo: float
 
-    def __init__(self, numero_control: str, nombre: str, apellido: str, rfc: str, sueldo:  float):
-        self.numero_control = numero_control
-        self.nombre = nombre
-        self.apellido = apellido
+    def __init__(self, numero_control: str, nombre: str, apellido: str, rfc: str, sueldo:  float,  contraseña:str):
+        
+        super().__init__(numero_control=numero_control, nombre=nombre, apellido=apellido, contraseña=contraseña)
         self.rfc = rfc
         self.sueldo = sueldo
 
