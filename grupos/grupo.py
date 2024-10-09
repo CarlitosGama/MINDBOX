@@ -6,18 +6,24 @@ from random import randint
 
 class Grupo:
     id: str
-    estudiantes: list[Estudiante] = []
-    maestros: list[Maestro] = []
-    materias: list[Materia] = []
+    estudiantes: List[Estudiante] = []
+    maestros: List[Maestro] = []
+    materias: List[Materia] = []
     tipo: chr
-    id_semestre = str
+    id_semestre: str
 
-
-    def __init__(self, tipo: str,  id_semestre: str):
-       self.id = self.generar_id()
-       self.tipo = tipo
-       self.id_semestre = id_semestre
-
+    def __init__(self, tipo: chr, id_semestre: str):
+        self.id = self.generar_id()
+        self.tipo = tipo
+        self.id_semestre = id_semestre
 
     def generar_id(self, tipo: chr) -> str:
-     return f"{tipo}-{randint(0, 100000)}-{randint(0, 100000)}"
+        return f"{tipo}-{randint(0, 100000)}-{randint(0, 100000)}"
+
+
+
+"""
+ID:
+TIPO
+ID: SEMESTRE
+"""
