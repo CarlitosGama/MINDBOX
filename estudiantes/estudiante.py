@@ -1,6 +1,6 @@
 from datetime import datetime
-from ususario.usuario import Usuario
-from ususario.utils import Rol
+from usuario.usuario import Usuario
+from usuario.utils.roles import Rol
 
 class Estudiante(Usuario):
 
