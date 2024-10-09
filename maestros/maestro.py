@@ -1,22 +1,18 @@
-from usuario.usuario import Usuario
-from usuario.utils.roles import Rol
+from datetime import datetime
+from ususario.usuario import Usuario
 
 class Maestro(Usuario):
+
     rfc: str
     sueldo: float
 
-    def __init__(self, numeroControl: str, nombre: str, apellido: str, rfc: str, sueldo: float, contrasenia: str):
-        super().__init__(
-            numero_control=numeroControl,
-            nombre=nombre,
-            apellido=apellido,
-            contrasenia=contrasenia,
-            rol=Rol.MAESTRO
-        )
+    def __init__(self, numero_control: str, nombre: str, apellido: str, rfc: str, sueldo:  float,  contraseña:str):
+        
+        super().__init__(numero_control=numero_control, nombre=nombre, apellido=apellido, contraseña=contraseña)
         self.rfc = rfc
         self.sueldo = sueldo
 
-    def mostrar_info_maestro(self):
+    def mostrar_info_M(self):
         nombre_completo = f"{self.nombre} {self.apellido}"
-        info = f"\n - Número de control: {self.numero_control}, nombre completo: {nombre_completo}, RFC: {self.rfc}"
-        return info
+        info = f"numero de control: {self.numero_control}, nombre completo: {nombre_completo}, rfc: {self.rfc}, sueldo: {self.sueldo}"
+        return info   
