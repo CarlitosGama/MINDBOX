@@ -50,7 +50,8 @@ class Menu:
             print("\n** MINDBOX **")
             print("1. Ver horario")
             print("2. Ver grupos")
-            print("3. Salir")
+            print("3. Mostrar mi informacion")
+            print("4. Salir")
 
             opcion = int(input("Ingresa una opción"))
 
