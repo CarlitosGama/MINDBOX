@@ -1,11 +1,11 @@
 from datetime import datetime
-
-from zoologico.zoologico import Zoologico
+from zoologico.zoologico.zoologico import Zoologico
 from guia.guia import Guia
 from veterinario.veterinario import Veterinario
 from mantenimiento.mantenimiento import Mantenimiento
 from administracion.administracion import Administracion
-
+from persona.utils.roles import Rol
+from zoologico.visitante.visitante import Visitante
 class Menu:
     zoologico: Zoologico = Zoologico()
 
@@ -79,7 +79,7 @@ class Menu:
         tipo = input("Ingresa el tipo de empleado (guia/veterinario/mantenimiento/administracion): ").lower()
 
         # Información común a todos los empleados
-        numero_control = self.zoologico.generar_numero_control
+        numero_control = self.zoologico.generar_numero_control()
         nombre = input("Nombre del empleado: ")
         apellido = input("Apellido del empleado: ")
         rfc = input("RFC del empleado: ")
@@ -113,11 +113,23 @@ class Menu:
         self.zoologico.eliminar_empleado(rfc)
 
     def ingresar_fecha_nacimiento(self):
-        ano = int(input("Año de nacimiento: "))
-        mes = int(input("Mes de nacimiento: "))
-        dia = int(input("Día de nacimiento: "))
+        ano = int(input("Año: "))
+        mes = int(input("Mes: "))
+        dia = int(input("Día: "))
         return datetime(ano, mes, dia)
 
+    def registrar_visitante(self):
+        print("\nSeleccionaste registrar un visitante.")
+
+        numero_control_v = self.zoologico.generar_numero_control()
+        nombre = input("Nombre del Visitante: ")
+        apellido = input("Apellido del Visitante: ")
+        fecha_registro = self.ingresar_fecha_nacimiento()
+        #curp = input("Curp del Visitante: ")
+        fecha_nacimiento = self.ingresar_fecha_nacimiento()
+        
+        nuevo_visitante = Visitante(numero_control=numero_control_v, nombre=nombre, apellido=apellido, fecha_nacimiento=fecha_nacimiento, fecha_registro=fecha_registro)
+        self.registrar_visitante(nuevo_visitante)
 
 
 
@@ -132,12 +144,6 @@ class Menu:
 
 
 
-
-
-
-
-
-#from zoologico.zoologico import Zoologico
 #from empleado.empleado import Empleado
 #from visitante.visitante import Visitante
 #from animal.animal import Animal
