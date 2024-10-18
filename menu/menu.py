@@ -138,6 +138,8 @@ class Menu:
              descripcion = input("Ingrese la drescripcion de la materia: ")
              semestre = input("Ingrese el semestre en el que se cursa la materia: ")
              creditos = input("Ingrese los creditos de la materia: ")
+             id_maestro = input("Ingresa el id del maestro asignado a esta materia: ")
+             
 
              numero_control_MT = self.escuela.generar_num_control_MT(nombre=nombre, semestre=semestre, creditos=creditos)
 

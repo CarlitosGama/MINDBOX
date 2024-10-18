@@ -25,3 +25,10 @@ class Grupo:
     def mostrar_info_G(self):
         info = f"ID: {self.id}, tipo: {self.tipo}, ID de semestre: {self.id_semestre}"
         return info
+    
+    def mostrar_info_grupo_para_estudiantes(self):
+       print(f"Informacion del Grupo {self.tipo}, del semestre{self.id_semestre}")
+
+       for materia in self.materias:
+          print(materia.mostrar_info_MT())
+          

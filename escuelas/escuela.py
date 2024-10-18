@@ -51,3 +51,37 @@ class Escuela:
                 return  usuario
              
        return None
+    
+    def registrar_estudiante_en_grupo(self, numero_control_estudiante: str, id_grupo: str):
+       estudiante = self.buscar_estudiante_por_id(numero_control=numero_control_estudiante)
+
+       if estudiante is None:
+          print("No se encontro un estudiante con el numero de estudiante proporcionado ")
+          return
+       grupo = self.buscar_grupo_por_id(numero_control=id_grupo)
+       #checar   
+
+    
+    def buscar_estudiante_por_id(self, numero_control:str):
+       for estudiante in self.lista_estudiantes:
+          if estudiante.numero_control ==  numero_control:
+                return  estudiante
+             
+       return None
+    
+    def buscar_grupo_por_id(self, numero_control:str):
+       for grupo in self.lista_grupos:
+          if grupo.id ==  numero_control:
+                return  grupo
+             
+       return None
+    
+    def buscar_maestro_por_id(self, numero_control:str):
+       for maestro in self.lista_maestros:
+          if maestro.numero_control ==  numero_control:
+                return  maestro
+             
+       return None
+    
+    def ver_grupos_asignados_a_estudiantes(self, numero_control_estudiante):
+       
