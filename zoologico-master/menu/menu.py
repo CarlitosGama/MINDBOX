@@ -158,10 +158,10 @@ class Menu:
 
     def eliminar_visitante(self):
         print("\nSeleccionaste eliminar un visitante.")
-        numero_control = input("Ingresa el número de control del animal a eliminar: ")
-        self.zoologico.eliminar_animal(numero_control)
+        numero_control = input("Ingresa el número de control del visitante a eliminar: ")
+        self.zoologico.eliminar_visitante(numero_control)
 
-
+    
     def eliminar_empleado(self):
         print("\nSeleccionaste eliminar un empleado.")
         rfc = input("Ingresa el RFC del empleado a eliminar: ")

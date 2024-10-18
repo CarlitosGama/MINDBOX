@@ -98,6 +98,10 @@ class Zoologico:
         """Elimina un animal usando su número de control"""
         for animal in self.lista_animales:
             if animal.numero_control == numero_control:
+                for actividad in self.lista_actividades:
+                    if  actividad.animal_id == numero_control:
+                        print("El animal tiene una o mas actividades registradas, para continuar con el proceso, primero debe eliminar las actividades")
+                        return
                 self.lista_animales.remove(animal)
                 print(f"Animal con número de control {numero_control} eliminado.")
                 return
@@ -126,6 +130,10 @@ class Zoologico:
     def eliminar_empleado(self, rfc: str):
         empleado = self.buscar_empleado_por_rfc(rfc)
         if empleado:
+            for actividad in self.lista_actividades:
+                    if  actividad.empleado == empleado.nombre:
+                        print("El Empleado tiene una o mas actividades registradas, para continuar con el proceso, primero debe eliminar las actividades")
+                        return
             self.lista_empleados.remove(empleado)
             print(f"Empleado {empleado.nombre} eliminado con éxito.")
         else:
@@ -141,3 +149,16 @@ class Zoologico:
         numero_control = f"l{ano}{mes}{longitud_mas_uno}{aleatorio}"
         
         return numero_control
+    
+    def eliminar_visitante(self, numero_control: str):
+        """Elimina un visitante usando su número de control"""
+        for visitante in self.lista_visitantes:
+            if visitante.numero_control == numero_control:
+                #for visitante in self.lista_visitantes:
+                    #if  visitante. == numero_control:
+                        #print("El animal tiene una o mas actividades registradas, para continuar con el proceso, primero debe eliminar las actividades")
+                       # return
+                self.lista_visitantes.remove(visitante)
+                print(f"Visitante con número de control {numero_control} eliminado.")
+                return
+        print(f"No se encontró el visitante con número de control {numero_control}.")
